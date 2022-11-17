@@ -1,0 +1,150 @@
+/* Menu Déroulant */
+:root{
+    --hauteur-menu: 45px;
+  }
+  
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  nav {
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+  }
+  
+  nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+    height: var(--hauteur-menu);
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: #333333;
+    border:3px solid #B1B1B1 ;
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+  
+  nav > ul > li:hover > a{
+    color: #d8a327;
+  }
+  
+  nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  li a {
+    text-decoration: none;
+ color: #d6d0b8;
+  }
+  
+  .menu-deroulant > a:after{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+  }
+  
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+  }
+  
+  @keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(45deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
+  
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    overflow: auto;
+    max-height: 0;
+    border-radius: 3px;
+    background-color: #666666;
+  }
+  
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+  
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+      border-top: 3px solid #B1B1B1;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 3px solid #B1B1B1;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+  
+  .sous-menu > li:hover {
+    background-color: rgba(57, 57, 57, 0.3);
+  }
+  
+  .sous-menu > li > a {
+    align-items: left;
+    display: flex;
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+  }
+  
+  .sous-menu > li:hover > a {
+    color: #d8a327;
+  }
+  /* Fin */
+
+  /* Contenu Page */
+div {box-sizing:content-box;width:100%;margin:auto;}
+body {background-color:#333333;background:url("https://www.grimoire-cendre.fr/css/P2_back.png");}
+#bloc {width:60%;float:center;}
+#contenu {padding:2%;margin:5% 2% 2% 2%;}
+#contenu {background-color:rgba(74, 74, 74, 0.5);color:#d6d0b8;}
+#contenu {font-size:80%;}
+
+.P1 {text-align:center;}
+.P3 {text-align:right;}
+.F1 {font-weight:bold;}
+.F2 {text-decoration:underline;}
+.Z2 {font-size:130%;}
+.M2 td, .M2 th {padding:5px;}
+
+.kes {background-color:#3D3D3D;}
+.kesa {background-color:#555555;}
+.kesi {background-color:#666666;}
+
+.tah, .tah td, .tah th {border:solid 2px #666666;}
+.zara {color:#d8a327;}
+.zahuloth {text-align:center;text-transform:uppercase;border-bottom:2px solid #B1B1B1;}
+/* Fin */
+
+/* ---Censure--- */
+a.hidden {color:#666666;}
+a.hidden:hover {color:#DDDDDD;}
+/* Fin */
